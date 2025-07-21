@@ -1,14 +1,26 @@
 import React from 'react';
 import { Calendar, MapPin, Users } from 'lucide-react';
 
+type Category = 'Formação' | 'Produção' | 'Evento' | 'Audiovisual';
+
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  location: string;
+  participants: number;
+  category: Category;
+}
+
 const PortfolioSection = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       title: 'Workshop de Produção de Materiais Táteis',
       description: 'Capacitação para educadores na criação de recursos didáticos acessíveis para estudantes com deficiência visual.',
       image: 'https://images.pexels.com/photos/8349165/pexels-photo-8349165.jpeg?auto=compress&cs=tinysrgb&w=600',
       date: '2024',
-      location: 'São Paulo, SP',
+      location: 'Fortaleza, CE',
       participants: 85,
       category: 'Formação',
     },
@@ -26,14 +38,14 @@ const PortfolioSection = () => {
       description: 'Evento nacional reunindo educadores, famílias e especialistas para discussão de práticas inclusivas.',
       image: 'https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&w=600',
       date: '2023',
-      location: 'Rio de Janeiro, RJ',
+      location: 'Fortaleza, CE',
       participants: 350,
       category: 'Evento',
     },
     {
       title: 'Produção de Vídeos em Libras',
       description: 'Série de videoaulas com interpretação em Libras para conteúdos de ciências e matemática.',
-      image: 'https://images.pexels.com/photos/8349257/pexels-photo-8349257.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: '/foto-video-jandaya.png',
       date: '2023',
       location: 'Digital',
       participants: 500,
@@ -41,7 +53,7 @@ const PortfolioSection = () => {
     },
   ];
 
-  const categoryColors = {
+  const categoryColors: Record<Category, string> = {
     'Formação': 'bg-olive-100 text-olive-700',
     'Produção': 'bg-salmon-100 text-salmon-700',
     'Evento': 'bg-brown-100 text-brown-700',
