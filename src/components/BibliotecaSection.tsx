@@ -1,7 +1,9 @@
 import React from 'react';
 import { Download, BookOpen, FileText, Video, Users, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const BibliotecaSection = () => {
+  const navigate = useNavigate();
   const categories = [
     {
       title: 'Provas Adaptadas',
@@ -71,7 +73,9 @@ const BibliotecaSection = () => {
                     {category.count} materiais
                   </span>
                   
-                  <button className="inline-flex items-center text-olive-600 hover:text-olive-700 font-medium text-sm transition-colors duration-200">
+                  <button 
+                    onClick={() => navigate('/biblioteca')}
+                    className="inline-flex items-center text-olive-600 hover:text-olive-700 font-medium text-sm transition-colors duration-200">
                     Acessar
                     <Download className="ml-1 h-4 w-4" />
                   </button>
@@ -82,7 +86,9 @@ const BibliotecaSection = () => {
         </div>
 
         <div className="text-center mt-10">
-          <button className="inline-flex items-center px-8 py-3 bg-olive-600 text-white font-medium rounded-full hover:bg-olive-700 transition-colors duration-200">
+          <button 
+            onClick={() => navigate('/biblioteca')}
+            className="inline-flex items-center px-8 py-3 bg-olive-600 text-white font-medium rounded-full hover:bg-olive-700 transition-colors duration-200">
             Ver Todos os Materiais
             <ArrowRight className="ml-2 h-5 w-5" />
           </button>

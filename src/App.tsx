@@ -12,6 +12,7 @@ import ScrollToTop from './components/ScrollToTop';
 import TermosDeUso from './components/TermosDeUso';
 import PoliticaPrivacidade from './components/PoliticaPrivacidade';
 import Acessibilidade from './components/Acessibilidade';
+import Biblioteca from './components/Biblioteca';
 
 const HomePage = () => (
   <>
@@ -33,6 +34,7 @@ function App() {
       <div className="min-h-screen bg-white">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/biblioteca" element={<Biblioteca />} />
           <Route path="/termos-de-uso" element={<TermosDeUso />} />
           <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
           <Route path="/acessibilidade" element={<Acessibilidade />} />

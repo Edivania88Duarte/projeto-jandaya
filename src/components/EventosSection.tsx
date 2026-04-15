@@ -11,6 +11,7 @@ const EventosSection = () => {
       type: 'Presencial',
       description: 'Aprenda sobre ferramentas e recursos tecnológicos que facilitam o aprendizado de estudantes com deficiência.',
       status: 'open',
+      formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/viewform',
     },
     {
       title: 'Webinar: Práticas Inclusivas em Sala de Aula',
@@ -20,6 +21,7 @@ const EventosSection = () => {
       type: 'Virtual',
       description: 'Estratégias práticas para criar um ambiente de aprendizagem verdadeiramente inclusivo.',
       status: 'open',
+      formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/viewform',
     },
   ];
 
@@ -109,7 +111,9 @@ const EventosSection = () => {
                   </div>
                 </div>
                 
-                <button className="w-full bg-olive-600 text-white py-3 rounded-lg font-medium hover:bg-olive-700 transition-colors duration-200 flex items-center justify-center">
+                <button 
+                  onClick={() => window.open(event.formLink, '_blank')}
+                  className="w-full bg-olive-600 text-white py-3 rounded-lg font-medium hover:bg-olive-700 transition-colors duration-200 flex items-center justify-center">
                   Inscrever-se
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </button>
@@ -118,8 +122,8 @@ const EventosSection = () => {
           </div>
         </div>
 
-        {/* Eventos Passados */}
-        <div>
+        {/* Eventos Passados - Oculto por enquanto */}
+        {/* <div>
           <h3 className="text-2xl font-semibold text-stone-800 mb-6">
             Eventos Realizados
           </h3>
@@ -153,7 +157,7 @@ const EventosSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -86,7 +86,9 @@ const FAQSection = () => {
             Não encontrou a resposta que procurava?
           </p>
           <a
-            href="mailto:jandayaprojeto@gmail.com"
+            href="https://wa.me/5585985664001"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-olive-600 text-white font-medium rounded-full hover:bg-olive-700 transition-colors duration-200"
           >
             Entre em Contato

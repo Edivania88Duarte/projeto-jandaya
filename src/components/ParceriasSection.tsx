@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Handshake, Mail, ArrowRight } from 'lucide-react';
 
 const ParceriasSection = () => {
@@ -6,22 +6,22 @@ const ParceriasSection = () => {
     {
       name: 'Universidade Federal de São Paulo',
       type: 'Instituição de Ensino',
-      logo: 'https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=300&h=200',
+      logo: '/jandaya4.jpeg',
     },
     {
       name: 'Instituto Benjamin Constant',
       type: 'Organização Especializada',
-      logo: 'https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&w=300&h=200',
+      logo: '/jandaya5.jpeg',
     },
     {
       name: 'Secretaria Municipal de Educação',
       type: 'Poder Público',
-      logo: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=300&h=200',
+      logo: '/image.png',
     },
     {
       name: 'Fundação Dorina Nowill',
       type: 'Organização Social',
-      logo: 'https://images.pexels.com/photos/8349335/pexels-photo-8349335.jpeg?auto=compress&cs=tinysrgb&w=300&h=200',
+      logo: '/jandaya1.jpeg',
     },
   ];
 
@@ -80,10 +80,13 @@ const ParceriasSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="flex items-center text-stone-600">
-                <Mail className="h-5 w-5 mr-2" />
-                <span>parcerias@projetojandaya.org.br</span>
-              </div>
+              <a
+                href="mailto:jandayaprojeto@gmail.com"
+                className="inline-flex items-center px-8 py-3 bg-stone-600 text-white font-medium rounded-full hover:bg-stone-700 transition-colors duration-200"
+              >
+                <Mail className="mr-2 h-5 w-5" />
+                Email
+              </a>
               
               <a
                 href="https://wa.me/5585985664001"
