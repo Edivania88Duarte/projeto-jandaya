@@ -2,6 +2,18 @@
 import { Handshake, Mail, ArrowRight } from 'lucide-react';
 
 const ParceriasSection = () => {
+  const CONTACT_EMAIL = 'jandayaprojeto@gmail.com';
+  const gmailComposeHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    CONTACT_EMAIL
+  )}`;
+  const copyToClipboard = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      // ignore
+    }
+  };
+
   const partners = [
     {
       name: 'Universidade Federal de São Paulo',
@@ -81,8 +93,14 @@ const ParceriasSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="mailto:jandayaprojeto@gmail.com"
+                href={`mailto:${CONTACT_EMAIL}`}
+                onClick={async () => {
+                  await copyToClipboard(CONTACT_EMAIL);
+                  window.open(gmailComposeHref, '_blank', 'noopener,noreferrer');
+                }}
                 className="inline-flex items-center px-8 py-3 bg-stone-600 text-white font-medium rounded-full hover:bg-stone-700 transition-colors duration-200"
+                aria-label="Enviar e-mail para o Projeto Jandaya (o endereço será copiado como alternativa)"
+                title="Clique para enviar e-mail (o endereço também será copiado)"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Email
